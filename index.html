@@ -11,13 +11,33 @@
 </head>
 
 <body class="container">
-    <form method="post" action="">
+    <form method="post" action="https://singulars2023.free.beeceptor.com">
 
         <fieldset>
 
             <label for="nombre">Nombre: </label>
-            <input type="text" required maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
+            <input type="text" maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
+
+            <label for="edad">Edad: </label>
+            <input type="number" min="18" max="99" placeholder="18" name="edad" id="edad" required>
+
+            <label for="dni">DNI: </label>
+            <input type="number" pattern="[0-9]{8}[A-Z]{1}" maxlength="9" name="dni" id="dni" placeholder="92825740J" required>
+
+            <label for="ciudad">Ciudad de origen: </label>
+            <input type="text" maxlength="100" name="ciudad" id="ciudad" placeholder="Barcelona" required>
+
+            <label for="transporte">Como vienes a estudiar? </label>
+            <select name="transporte" id="transporte" required>
+                <option value="a-pie" selected>A pie</option>
+                <option value="transporte-publico">Transporte público</option>
+                <option value="transporte-privado">Transporte Privado</option>
+            </select>
+
+            <label for="objetivos">Objetivos del curso: </label>
+            <textarea name="objetivos" id="objetivos" cols="30" rows="10"></textarea>
         </fieldset>
+        
 
         <input type="submit" class="submit" id="submit" value="Enviar" />
 
